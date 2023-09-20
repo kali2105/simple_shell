@@ -25,7 +25,7 @@ char *location(char *command){
                 strcat(file_path, command);
                 strcat(file_path, "\0");
                /* test the path exist or no */
-               if (stat(path, &buff) == 0){
+               if (stat(file_path, &buff) == 0){
                   /* return value of 0 means success implying that the file_path is valid*/
                   /* free up allocated memory before returning your file_path */
                   free(path_c);

@@ -39,8 +39,11 @@ char *read_input(void)
 			write(STDOUT_FILENO, "\n", 1);
 		exit(0);
 	}
-	if (input_buffer[read_count - 1] == '\n' || input_buffer[read_count - 1] == '\t')
+	if (input_buffer[read_count - 1] == '\n' ||
+	input_buffer[read_count - 1] == '\t')
+	{
 		input_buffer[read_count - 1] = '\0';
+	}
 	for (i = 0; input_buffer[i]; i++)
 	{
 		if (input_buffer[i] == '#' && input_buffer[i - 1] == ' ')
@@ -103,7 +106,7 @@ char *find_full_path(char **args, char *PATH, char *copy)
 }
 
 /**
- * check_builtin_commands - A fct checks if the first user string is a built-in command
+ * check_builtin_commands - A fct checks if the first user string is a b-i cmd
  * @args: Pointer to an array of user strings
  * @input_buffer: Pointer to the user input string
  * @exit_status: Exit status of execve

@@ -1,5 +1,13 @@
 #include "my_shell.h"
 
+/**
+ * main - Entry of the main simple shell program
+ *
+ * This function initializes the shell and enters a loop to
+ * read and execute user commands
+ *
+ * Return: 0 (Success)
+ */
 int main(void)
 {
 		char *full_path = NULL, *copy_path = NULL, *input_buffer = NULL;
